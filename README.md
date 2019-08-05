@@ -12,4 +12,4 @@ self.popup.open()
 ~~~
 といったような記述をすることで作成できます。kvファイルのポップアップウィンドウに対応する部分にTextInputを書くことで入力フォームをポップアップ上に配置することもできます。フォーム上に入力した内容については、このプログラムの場合registボタンを押した時に呼び出される関数に入力内容を引数として渡すことで親ウィンドウに渡しています。
 
-<img src="screenshot1.png" width="49%"> <img src="screenshot2.png" width="49%">  
+<img src="task/screenshot1.png" width="49%"> <img src="task/screenshot2.png" width="49%">  
