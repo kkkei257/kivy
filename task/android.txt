@@ -1,0 +1,3 @@
+title=task
+author=Taka
+orientation=portrait

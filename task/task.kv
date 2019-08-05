@@ -1,0 +1,167 @@
+#:kivy 1.0
+#:import kivy kivy
+#:import main main
+
+Task
+
+<Task>:
+    canvas:
+        Color:
+            rgba: 1, 1, 0.94, 1
+        Rectangle:
+#            source: 'data/images/background.jpg'
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        padding: '8dp'
+        spacing: '8dp'
+#        text_input: display_input
+
+        ActionBar:
+            size_hint_y: 0.05
+            ActionView:
+                ActionPrevious:
+                    title: 'task'
+                    with_previous: False
+
+
+        Label:
+            size_hint_y: 0.01
+            text: ""
+            
+
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button1
+            text: root.text1
+            font_size: 40
+            on_release: root.buttonClicked(0)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button2
+            text: root.text2
+            font_size: 40
+            on_release: root.buttonClicked(1)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button3
+            text: root.text3
+            font_size: 40
+            on_release: root.buttonClicked(2)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button4
+            text: root.text4
+            font_size: 40
+            on_release: root.buttonClicked(3)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button5
+            text: root.text5
+            font_size: 40
+            on_release: root.buttonClicked(4)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button6
+            text: root.text6
+            font_size: 40
+            on_release: root.buttonClicked(5)
+            
+        Button:
+            background_normal: ''
+            background_color: 1, .3, .4, .85
+            size_hint_y: 0.1
+            id: button7
+            text: root.text7
+            font_size: 40
+            on_release: root.buttonClicked(6)
+            
+        Label:
+            size_hint_y: 0.01
+            text: ""
+            
+        BoxLayout:
+            size_hint_y: 0.07
+            
+            Button:
+                background_normal: ''
+                background_color: 0.625, 0.320, 0.176, 1
+                size_hint_x: 1
+                size_hint_y: 1
+                id: page1
+                text: "1"
+                font_size: 40
+                on_release: root.page(1)
+                
+            Label:
+                size_hint_x: 0.1
+                text: ""
+                
+            Button:
+                background_normal: ''
+                background_color: 0.625, 0.320, 0.176, 1
+                size_hint_x: 1
+                size_hint_y: 1
+                id: page2
+                text: "2"
+                font_size: 40
+                on_release: root.page(2)
+                
+            Label:
+                size_hint_x: 0.1
+                text: ""
+                
+            Button:
+                background_normal: ''
+                background_color: 0.625, 0.320, 0.176, 1
+                size_hint_x: 1
+                size_hint_y: 1
+                id: page3
+                text: "3"
+                font_size: 40
+                on_release: root.page(3)
+            
+        
+<PopupWindow>:
+	BoxLayout:
+        orientation: 'vertical'
+        
+        TextInput:
+            size_hint_y: 0.7
+            id: popup_input
+            font_size: 30
+            hint_text: '文字を入力してください'
+            focus: True
+    
+        BoxLayout:
+            size_hint_y: 0.3
+
+            Button:
+                size_hint_y: 0.7
+                text: 'Delete'
+                on_release: root.delete()
+
+            Button:
+                size_hint_y: 0.7
+                text: 'Regist'
+                on_release: root.regist(popup_input.text)
